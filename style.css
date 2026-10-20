@@ -20,7 +20,8 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Płynne przewijanie (Smooth Scroll) */
+    scroll-behavior: smooth;
+    /* Płynne przewijanie (Smooth Scroll) */
     background-color: var(--bg-color);
     color: var(--text-main);
     overflow-x: hidden;
@@ -83,9 +84,17 @@ body {
 }
 
 @keyframes moveBlob {
-    0% { transform: translate(0px, 0px) scale(1); }
-    50% { transform: translate(100px, -80px) scale(1.2); }
-    100% { transform: translate(-50px, 50px) scale(0.9); }
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    50% {
+        transform: translate(100px, -80px) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50px, 50px) scale(0.9);
+    }
 }
 
 /* ==========================================================================
@@ -105,13 +114,16 @@ body {
 .content-area::-webkit-scrollbar {
     width: 6px;
 }
+
 .content-area::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .content-area::-webkit-scrollbar-thumb {
     background: var(--card-border);
     border-radius: 10px;
 }
+
 .content-area::-webkit-scrollbar-thumb:hover {
     background: var(--spotify-green);
 }
@@ -139,7 +151,8 @@ body {
     align-items: center;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transform-style: preserve-3d; /* Wymagane dla efektu 3D Tilt */
+    transform-style: preserve-3d;
+    /* Wymagane dla efektu 3D Tilt */
 }
 
 /* Okrągłe zdjęcie profilowe z pulsującym ringiem */
@@ -148,7 +161,8 @@ body {
     width: 150px;
     height: 150px;
     margin-bottom: 25px;
-    transform: translateZ(40px); /* Wyciągnięcie elementu w przestrzeń 3D */
+    transform: translateZ(40px);
+    /* Wyciągnięcie elementu w przestrzeń 3D */
 }
 
 .profile-avatar {
@@ -163,14 +177,16 @@ body {
 
 .pulse-ring {
     position: absolute;
-    top: -3px; /* Dopasowanie idealnie do krawędzi ramki zdjęcia */
+    top: -3px;
+    /* Dopasowanie idealnie do krawędzi ramki zdjęcia */
     left: -3px;
     width: calc(100% + 6px);
     height: calc(100% + 6px);
     border-radius: 50%;
     border: 3px solid var(--spotify-green);
     box-shadow: 0 0 15px var(--spotify-green);
-    animation: pulse 5s infinite ease-in-out; /* Wydłużony czas do 3s dla większej płynności */
+    animation: pulse 5s infinite ease-in-out;
+    /* Wydłużony czas do 3s dla większej płynności */
     z-index: 1;
 }
 
@@ -179,10 +195,12 @@ body {
         opacity: 0.7;
         box-shadow: 0 0 20px rgba(31, 197, 89, 0.4);
     }
+
     50% {
         opacity: 1;
         box-shadow: 0 0 25px rgba(29, 185, 84, 0.9);
     }
+
     100% {
         opacity: 0.7;
         box-shadow: 0 0 20px rgba(31, 197, 89, 0.4);
@@ -211,7 +229,8 @@ body {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: auto; /* Popycha ikony społecznościowe na dół */
+    margin-bottom: auto;
+    /* Popycha ikony społecznościowe na dół */
     transform: translateZ(20px);
 }
 
@@ -326,7 +345,8 @@ body {
     background: var(--spotify-green);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--spotify-green);
-    width: 0; /* Animowane za pomocą JS / ScrollReveal */
+    width: 0;
+    /* Animowane za pomocą JS / ScrollReveal */
 }
 
 /* --- Sekcja: Portfolio / Projekty --- */
@@ -463,73 +483,99 @@ body {
     width: 100%;
     padding: 15px;
     background: rgba(255, 255, 255, 0.02);
-border: 1px solid var(--card-border);
-border-radius: 12px;
-color: var(--text-main);
-font-size: 1rem;
-outline: none;
-transition: all 0.3s ease;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
 }
+
 /* Efekt unoszącej się etykiety (Floating Label) */
 .form-group label {
-position: absolute;
-left: 15px;
-top: 15px;
-color: var(--text-muted);
-transition: all 0.3s ease;
-pointer-events: none;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
-.form-group input:focus ~ label,
-.form-group input:not(:placeholder-shown) ~ label,
-.form-group textarea:focus ~ label,
-.form-group textarea:not(:placeholder-shown) ~ label {
-top: -10px;
-left: 10px;
-font-size: 0.8rem;
-color: var(--spotify-green);
-background: #12141c; /* Maskowanie linii pod etykietą */
-padding: 0 5px;
-border-radius: 4px;
+
+.form-group input:focus~label,
+.form-group input:not(:placeholder-shown)~label,
+.form-group textarea:focus~label,
+.form-group textarea:not(:placeholder-shown)~label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: var(--spotify-green);
+    background: #12141c;
+    /* Maskowanie linii pod etykietą */
+    padding: 0 5px;
+    border-radius: 4px;
 }
+
 .form-group input:focus,
 .form-group textarea:focus {
-border-color: var(--spotify-green);
-box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
+    border-color: var(--spotify-green);
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
 }
+
 .submit-btn {
-background: var(--spotify-green);
-color: #000;
-border: none;
-padding: 15px 30px;
-border-radius: 12px;
-font-size: 1rem;
-font-weight: 600;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-transition: all 0.3s ease;
-align-self: flex-start;
+    background: var(--spotify-green);
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
 }
+
 .submit-btn:hover {
-background: var(--spotify-hover);
-box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
-transform: translateY(-2px);
+    background: var(--spotify-hover);
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
+    transform: translateY(-2px);
 }
+
 /* ==========================================================================
 6. RESPONSYWNOŚĆ (Media Queries dla urządzeń mobilnych)
 ========================================================================== */
 @media (max-width: 992px) {
-.container {
-flex-direction: column;
-margin: 20px auto;
+    .container {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .profile-sidebar {
+        flex: none;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+    }
 }
-.profile-sidebar {
-flex: none;
-width: 100%;
-height: auto;
-position: relative;
-top: 0;
-}
+
+/* ==========================================================================
+   7. PASEK POSTĘPU PRZEWIJANIA (Scroll Progress Bar)
+   ========================================================================== */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    /* Szerokość kontrolowana przez JS */
+    height: 4px;
+    background: var(--spotify-green);
+    box-shadow: 0 0 15px var(--spotify-green), 0 0 5px var(--spotify-green);
+    z-index: 9999;
+    /* Gwarancja, że pasek będzie nad każdym elementem */
+    transition: width 0.1s ease-out;
+    /* Płynne dopasowanie szerokości */
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,141 +13,167 @@
     <!-- ScrollReveal JS (Efekty pojawiania się tekstu) -->
     <script src="https://unpkg.com"></script>
 </head>
+
 <body>
+    <!-- Pasek postępu przewijania na samej górze -->
+    <div id="scroll-progress"></div>
 
     <!-- Aurora Background (Animowane, rozmyte obiekty w tle) -->
     <div class="aurora-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
 
-    <!-- Główny Kontener Strony -->
-    <div class="container">
-        
-        <!-- LEWA STRONA: Profil Statyczny (Glassmorphism Card) -->
-        <aside class="profile-sidebar">
-            <div class="profile-card" data-tilt>
-                <div class="avatar-container">
-                    <!-- Zastąp 'avatar.jpg' ścieżką do swojego zdjęcia -->
-                    <img src="avatar.jpg" alt="Bartosz Pyznar" class="profile-avatar">
-                    <div class="pulse-ring"></div>
-                </div>
-                <h1 class="profile-name">Bartosz Pyznar</h1>
-                <p class="profile-title">Technik Programista</p>
-                
-                <p class="profile-bio">
-                    Cześć, jestem Bartosz! 🚀 Jako certyfikowany <strong>Technik Programista</strong> zmieniam linie kodu w funkcjonalne i estetyczne rozwiązania. Moje życie kręci się wokół technologii – od software developmentu, sprzętu, aż po fascynującą mnie automatykę. Kiedy nie programuję, czyszczę tablicę na boisku, grając w koszykówkę. 🏀
-                </p>
+        <!-- Aurora Background (Animowane, rozmyte obiekty w tle) -->
+        <div class="aurora-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
 
-                <!-- Social Media Links -->
-                <div class="social-links">
-                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </aside>
+        <!-- Główny Kontener Strony -->
+        <div class="container">
 
-        <!-- PRAWA STRONA: Przewijana zawartość (Scrollable Content) -->
-        <main class="content-area">
-            
-            <!-- Sekcja: Umiejętności -->
-            <section id="skills" class="content-section">
-                <h2 class="section-title"><i class="fa-solid fa-code"></i> Umiejętności</h2>
-                <div class="skills-grid">
-                    <div class="skill-card" data-tilt>
-                        <i class="fab fa-js skill-icon"></i>
-                        <h3>JavaScript</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            <!-- LEWA STRONA: Profil Statyczny (Glassmorphism Card) -->
+            <aside class="profile-sidebar">
+                <div class="profile-card" data-tilt>
+                    <div class="avatar-container">
+                        <!-- Zastąp 'avatar.jpg' ścieżką do swojego zdjęcia -->
+                        <img src="avatar.jpg" alt="Bartosz Pyznar" class="profile-avatar">
+                        <div class="pulse-ring"></div>
                     </div>
-                    <div class="skill-card" data-tilt>
-                        <i class="fa-solid fa-microchip skill-icon"></i>
-                        <h3>Automatyka & IoT</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-                    </div>
-                    <div class="skill-card" data-tilt>
-                        <i class="fa-solid fa-laptop-code skill-icon"></i>
-                        <h3>Programowanie</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-                    </div>
-                    <div class="skill-card" data-tilt>
-                        <i class="fa-solid fa-database skill-icon"></i>
-                        <h3>Bazy Danych</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    <h1 class="profile-name">Bartosz Pyznar</h1>
+                    <p class="profile-title">Technik Programista</p>
+
+                    <p class="profile-bio">
+                        Cześć, jestem Bartosz! 🚀 Jako certyfikowany <strong>Technik Programista</strong> zmieniam linie
+                        kodu w funkcjonalne i estetyczne rozwiązania. Moje życie kręci się wokół technologii – od
+                        software developmentu, sprzętu, aż po fascynującą mnie automatykę. Kiedy nie programuję,
+                        czyszczę tablicę na boisku, grając w koszykówkę. 🏀
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-            </section>
+            </aside>
 
-            <!-- Sekcja: Projekty / Portfolio -->
-            <section id="projects" class="content-section">
-                <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Portfolio / Projekty</h2>
-                <div class="projects-grid">
-                    <div class="project-card" data-tilt>
-                        <div class="project-info">
-                            <h3>Smart Home Automation</h3>
-                            <p>System zarządzania automatyką domową oparty na mikrokontrolerach z nowoczesnym panelem webowym.</p>
-                            <span class="tag">Automatyka</span> <span class="tag">JS</span>
+            <!-- PRAWA STRONA: Przewijana zawartość (Scrollable Content) -->
+            <main class="content-area">
+
+                <!-- Sekcja: Umiejętności -->
+                <section id="skills" class="content-section">
+                    <h2 class="section-title"><i class="fa-solid fa-code"></i> Umiejętności</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-tilt>
+                            <i class="fab fa-js skill-icon"></i>
+                            <h3>JavaScript</h3>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-tilt>
+                            <i class="fa-solid fa-microchip skill-icon"></i>
+                            <h3>Automatyka & IoT</h3>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-tilt>
+                            <i class="fa-solid fa-laptop-code skill-icon"></i>
+                            <h3>Programowanie</h3>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-tilt>
+                            <i class="fa-solid fa-database skill-icon"></i>
+                            <h3>Bazy Danych</h3>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-card" data-tilt>
-                        <div class="project-info">
-                            <h3>Statystyki Koszykarskie</h3>
-                            <p>Aplikacja webowa do śledzenia i analizy wyników oraz rzutów na żywo podczas meczów koszykówki.</p>
-                            <span class="tag">Web App</span> <span class="tag">SQL</span>
+                </section>
+
+                <!-- Sekcja: Projekty / Portfolio -->
+                <section id="projects" class="content-section">
+                    <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Portfolio / Projekty</h2>
+                    <div class="projects-grid">
+                        <div class="project-card" data-tilt>
+                            <div class="project-info">
+                                <h3>Smart Home Automation</h3>
+                                <p>System zarządzania automatyką domową oparty na mikrokontrolerach z nowoczesnym
+                                    panelem webowym.</p>
+                                <span class="tag">Automatyka</span> <span class="tag">JS</span>
+                            </div>
+                        </div>
+                        <div class="project-card" data-tilt>
+                            <div class="project-info">
+                                <h3>Statystyki Koszykarskie</h3>
+                                <p>Aplikacja webowa do śledzenia i analizy wyników oraz rzutów na żywo podczas meczów
+                                    koszykówki.</p>
+                                <span class="tag">Web App</span> <span class="tag">SQL</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Sekcja: Doświadczenie -->
-            <section id="experience" class="content-section">
-                <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Doświadczenie</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content" data-tilt>
-                            <span class="timeline-date">2024 - Obecnie</span>
-                            <h3>Freelance / Własne Projekty IoT</h3>
-                            <p>Projektowanie inteligentnych systemów automatyki oraz tworzenie dedykowanych aplikacji webowych.</p>
+                <!-- Sekcja: Doświadczenie -->
+                <section id="experience" class="content-section">
+                    <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Doświadczenie</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content" data-tilt>
+                                <span class="timeline-date">2024 - Obecnie</span>
+                                <h3>Freelance / Własne Projekty IoT</h3>
+                                <p>Projektowanie inteligentnych systemów automatyki oraz tworzenie dedykowanych
+                                    aplikacji webowych.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content" data-tilt>
+                                <span class="timeline-date">2020 - 2024</span>
+                                <h3>Szkoła Ponadpodstawowa</h3>
+                                <p>Uzyskanie tytułu zawodowego: <strong>Technik Programista</strong>. Egzaminy zawodowe
+                                    zdane z wyróżnieniem.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content" data-tilt>
-                            <span class="timeline-date">2020 - 2024</span>
-                            <h3>Szkoła Ponadpodstawowa</h3>
-                            <p>Uzyskanie tytułu zawodowego: <strong>Technik Programista</strong>. Egzaminy zawodowe zdane z wyróżnieniem.</p>
+                </section>
+
+                <!-- Sekcja: Kontakt -->
+                <section id="contact" class="content-section">
+                    <h2 class="section-title"><i class="fa-solid fa-envelope"></i> Formularz kontaktowy</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Twoje Imię</label>
                         </div>
-                    </div>
-                </div>
-            </section>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Adres E-mail</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Treść wiadomości...</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Wyślij wiadomość <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </section>
 
-            <!-- Sekcja: Kontakt -->
-            <section id="contact" class="content-section">
-                <h2 class="section-title"><i class="fa-solid fa-envelope"></i> Formularz kontaktowy</h2>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" required placeholder=" ">
-                        <label for="name">Twoje Imię</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" required placeholder=" ">
-                        <label for="email">Adres E-mail</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" required placeholder=" "></textarea>
-                        <label for="message">Treść wiadomości...</label>
-                    </div>
-                    <button type="submit" class="submit-btn">Wyślij wiadomość <i class="fa-solid fa-paper-plane"></i></button>
-                </form>
-            </section>
+            </main>
+        </div>
 
-        </main>
-    </div>
-
-    <!-- Skrypty JS (Vanilla Tilt dla efektu 3D oraz logiki scrolla) -->
-    <script src="https://cloudflare.com"></script>
-    <script src="script.js"></script>
+        <!-- Skrypty JS (Vanilla Tilt dla efektu 3D oraz logiki scrolla) -->
+        <script src="https://cloudflare.com"></script>
+        <script src="script.js"></script>
 </body>
+
 </html>
