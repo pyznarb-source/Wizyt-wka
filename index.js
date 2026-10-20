@@ -1,6 +1,6 @@
 // Czekamy na pełne załadowanie struktury DOM
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     /* ==========================================================================
        1. INICJACJA EFEKTU 3D TILT (VanillaTilt)
        ========================================================================== */
@@ -50,9 +50,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Wyświetlenie modernistycznego powiadomienia (możesz podpiąć tu prawdziwy serwer np. EmailJS)
             alert(`Dziękuję za wiadomość, ${name}! Twój formularz został pomyślnie wysłany (symulacja).`);
-            
+
             // Czyszczenie formularza po wysłaniu
             contactForm.reset();
         });
+    }
+});
+/* ==========================================================================
+      4. LOGIKA PASKA POSTĘPU PRZEWIJANIA
+      ========================================================================== */
+const progressBar = document.getElementById('scroll-progress');
+
+window.addEventListener('scroll', () => {
+    // Całkowita wysokość dokumentu pomniejszona o wysokość okna przeglądarki
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Aktualna pozycja przewinięcia od góry
+    const scrolled = window.scrollY;
+
+    if (totalHeight > 0) {
+        // Obliczanie procentu przewinięcia strony
+        const progressPercentage = (scrolled / totalHeight) * 100;
+        progressBar.style.width = `${progressPercentage}%`;
     }
 });
