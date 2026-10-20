@@ -1,1 +1,2 @@
-# Wizyt-wka
+# Wizytowka
+Start z index.html
